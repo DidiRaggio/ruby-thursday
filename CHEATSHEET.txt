@@ -42,6 +42,11 @@ Get Launching Cheat Sheet provided by RubyThursday.com -- updated 7/14/16 -- Inc
 10. Set up preferred test and development gems
 
 #Option 1: with 'capybara-webkit'  -- you need to have QT installed first https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit.
+################# ISSUED THIS OPTiON!!!!!
+##
+Install qtv4.8.5 
+add qmake path to env variables in system settings C:\Qt\4.8.5\bin
+run: QMAKE=C:\Qt\4.8.5\bin\qmake gem install capybara-webkit
 
 	group :development, :test do
 		gem 'pry'
@@ -102,12 +107,17 @@ Get Launching Cheat Sheet provided by RubyThursday.com -- updated 7/14/16 -- Inc
 11. Install the gems
   $ bundle
 
+ #if timezone error add: gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
 12. Edit config/database.yml with preferred database and database names
   adapter: postgresql
   
   development:
   <<: *default
   database: db/ruby_thursday_development
+  ## ADD
+  username: postgres
+  password: Raggio88
 
   test:
     <<: *default
