@@ -21,6 +21,8 @@ development:
 test:
   <<: *default
   database: db/ruby_thursday_test
+  username: postgres
+  password: Raggio88
 production:
   <<: *default
   database: db/ruby_thursday_production

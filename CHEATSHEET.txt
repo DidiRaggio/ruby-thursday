@@ -97,7 +97,7 @@ run: QMAKE=C:\Qt\4.8.5\bin\qmake gem install capybara-webkit
     gem 'capybara-email'
     gem 'capybara-webkit'
 		gem 'database_cleaner'
-    gem 'factory_girl_rails'
+    gem 'factory_girl'
     gem 'faker' #some older RubySnacks reference 'ffaker'
     gem 'selenium-webdriver'
     gem 'simple_bdd'
@@ -122,6 +122,9 @@ run: QMAKE=C:\Qt\4.8.5\bin\qmake gem install capybara-webkit
   test:
     <<: *default
     database: db/ruby_thursday_test
+  username: postgres
+  password: Raggio88
+    
 
   production:
     <<: *default
@@ -248,3 +251,7 @@ run: QMAKE=C:\Qt\4.8.5\bin\qmake gem install capybara-webkit
 16. Commit set up 
   $ git add .
   $ git commit -m "Set up app with development gems, rspec, and pg"
+
+
+
+  RubySnack #4

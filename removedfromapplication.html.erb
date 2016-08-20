@@ -1,0 +1,7 @@
+
+  <%= link_to('Sign in', new_hacker_session ) %>
+  <%= link_to('Admin Sign in', new_admin_session ) %>
+  <% if admin_signed_in? %>
+    <%= link_to('View Hacker List', admin hacker_list_path ) %>
+  <% end %>
+   

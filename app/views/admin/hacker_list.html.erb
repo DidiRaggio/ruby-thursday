@@ -1,0 +1,12 @@
+<h1>Hacker List</h1>
+
+<thread>
+	<th>Email</th>
+	<th>Join Date</th>
+</thread>
+<tbody>
+	<% @hackers.each do |hacker| %>
+		<tr><%= hacker.email %></tr>
+		<tr><%= hacker.created_at.to_date%></tr>
+	<% end %>
+</tbody>
