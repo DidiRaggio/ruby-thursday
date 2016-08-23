@@ -5,6 +5,7 @@
   require 'spec_helper'
   require 'rspec/rails'
   require 'capybara/rspec'
+  require 'capybara/webkit/matchers'
   require 'simple_bdd'
   require 'shoulda/matchers'
   Capybara.javascript_driver = :webkit
@@ -28,8 +29,12 @@
     config.after(:each) do
       DatabaseCleaner.clean
     end
-
+    #RUBYSNACK #4
     config.include SimpleBdd, type: :feature
+    #RUBYSNACK #4 EXTRA..
+    RSpec.configure do |config|
+      config.include Devise::Test::ControllerHelpers, type: :controller
+    end
     
     Shoulda::Matchers.configure do |config|
       config.integrate do |with|
@@ -43,3 +48,4 @@
     config.filter_rails_from_backtrace!   
 
   end
+

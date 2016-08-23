@@ -35,30 +35,29 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-	group :development, :test do
-		gem 'pry'
+    group :development, :test do
+        gem 'pry'
     gem 'pry-nav'
     gem 'pry-rails', '~> 0.3.2'
     gem 'rspec-rails'
- 		#other option comes with Rails -- gem 'byebug', platform: :mri
-	end	
+        #other option comes with Rails -- gem 'byebug', platform: :mri
+    end 
 
-	group :development do
-		gem 'better_errors'
+    group :development do
+        gem 'better_errors'
     gem 'binding_of_caller'
-		gem 'listen', '~> 3.0.5'
-		gem 'letter_opener'
-		gem 'spring'
-		gem 'spring-watcher-listen', '~> 2.0.0'
-	end
+        gem 'listen', '~> 3.0.5'
+        gem 'letter_opener'
+        gem 'spring'
+        gem 'spring-watcher-listen', '~> 2.0.0'
+    end
 
   group :test do
     gem 'capybara-email'
     gem 'capybara-webkit'
-		gem 'database_cleaner'
+        gem 'database_cleaner'
     gem 'factory_girl_rails'
     gem 'faker' #some older RubySnacks reference 'ffaker'
-    gem 'selenium-webdriver'
     gem 'simple_bdd'
-    gem 'shoulda-matchers' 
-  end
+    gem 'shoulda-matchers'
+  end 

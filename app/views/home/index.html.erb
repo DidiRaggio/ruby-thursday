@@ -1,2 +1,23 @@
 <h1>Home#index</h1>
 <p>Welcome to RubyThursday</p>
+<p><button id="modal-link">Kirk Quote</button></p>
+<div id="modal-background">
+	<div id="modal-window">
+		<p class="modal-text">Beam me up, Scotty!</p>
+		<a href="#" class="close">Closex</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#modal-link').click(function() {
+			$('#modal-background').fadeIn();
+		});
+		$('.close').click(function() {
+			$('#modal-background').fadeOut();
+		})
+		// $('modal-link').click(function() {
+		// 	$('#modal-background').missingFucntion();
+		// });
+	});
+</script>

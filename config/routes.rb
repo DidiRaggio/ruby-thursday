@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :starships
+  devise_for :hackers
   root 'home#index'
 
   get 'admin/hacker_list'
